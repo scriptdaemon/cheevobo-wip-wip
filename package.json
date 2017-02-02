@@ -1,0 +1,18 @@
+{
+  "name": "cheevobot",
+  "version": "0.0.0",
+  "description": "Steam chat bot for the 100% Achievements Group.",
+  "homepage": "https://github.com/scriptdaemon/cheevobot",
+  "bugs": "https://github.com/scriptdaemon/cheevobot/issues",
+  "license": "ISC",
+  "author": "Kenneth Williams",
+  "main": "index.js",
+  "repository": "scriptdaemon/cheevobot",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "private": true
+}
