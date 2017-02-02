@@ -10,5 +10,5 @@ const SteamBot = require('../lib/steam-bot')
 const cheevobot = new SteamBot()
 cheevobot.start(err => {
   if (err) throw err
-  console.log('connected')
+  console.log('logged in')
 })
