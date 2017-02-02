@@ -17,11 +17,14 @@
   },
   "repository": "scriptdaemon/cheevobot",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "dependencies": {
     "confit": "^2.0.0",
     "steam-client": "^2.0.0"
+  },
+  "devDependencies": {
+    "standard": "^8.0.0"
   },
   "engines": {
     "node": ">=4.0.0"
