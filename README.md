@@ -1,6 +1,7 @@
 # CheevoBot
 
 [![Build Status][build-img]][build-url]
+[![Dependencies][dependencies-img]][dependencies-url]
 
 Steam chat bot for the 100% Achievements Group.
 
@@ -16,6 +17,8 @@ commits, and [submit a pull request][pull-request-url]. See the full
 
 [build-img]: https://travis-ci.org/scriptdaemon/cheevobot.svg
 [build-url]: https://travis-ci.org/scriptdaemon/cheevobot
+[dependencies-img]: https://david-dm.org/scriptdaemon/cheevobot/status.svg
+[dependencies-url]: https://david-dm.org/scriptdaemon/cheevobot
 
 [new-issue-url]: https://github.com/scriptdaemon/cheevobot-wip/issues/new
 [github-flow-url]: https://guides.github.com/introduction/flow
