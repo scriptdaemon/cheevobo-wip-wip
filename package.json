@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "confit": "^2.0.0",
-    "steam-client": "^2.0.0"
+    "steam-user": "^3.0.0"
   },
   "devDependencies": {
     "standard": "^8.0.0"
