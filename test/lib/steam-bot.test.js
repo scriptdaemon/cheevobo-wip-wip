@@ -28,5 +28,25 @@ tap.test('SteamBot', tap => {
     tap.end()
   })
 
+  tap.test('#exec', tap => {
+    tap.test('should display help message', tap => {
+      bot.exec('--help', (err, argv, output) => {
+        tap.error(err)
+        tap.ok(argv.help)
+        tap.end()
+      })
+    })
+
+    tap.test('should display version info', tap => {
+      bot.exec('--version', (err, argv, output) => {
+        tap.error(err)
+        tap.ok(argv.version)
+        tap.end()
+      })
+    })
+
+    tap.end()
+  })
+
   tap.end()
 })
