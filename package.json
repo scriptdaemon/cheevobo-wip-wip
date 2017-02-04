@@ -20,6 +20,7 @@
     "test": "standard && tap \"test/**/*.test.js\""
   },
   "dependencies": {
+    "chance": "^1.0.0",
     "confit": "^2.0.0",
     "steam-user": "^3.0.0",
     "yargs": "^6.1.1"
