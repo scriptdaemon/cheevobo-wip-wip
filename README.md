@@ -1,6 +1,7 @@
 # CheevoBot
 
 [![Build Status][build-status-img]][build-status-url]
+[![Test Coverage][test-coverage-img]][test-coverage-url]
 [![Code Review][code-review-img]][code-review-url]
 [![Dependency Status][dependency-status-img]][dependency-status-url]
 
@@ -18,6 +19,8 @@ commits, and [submit a pull request][pull-request-url]. See the full
 
 [build-status-img]: https://travis-ci.org/scriptdaemon/cheevobot.svg
 [build-status-url]: https://travis-ci.org/scriptdaemon/cheevobot
+[test-coverage-img]: https://coveralls.io/repos/github/scriptdaemon/cheevobot/badge.svg
+[test-coverage-url]: https://coveralls.io/github/scriptdaemon/cheevobot
 [code-review-img]:https://codeclimate.com/github/scriptdaemon/cheevobot/badges/gpa.svg
 [code-review-url]: https://codeclimate.com/github/scriptdaemon/cheevobot
 [dependency-status-img]: https://david-dm.org/scriptdaemon/cheevobot/status.svg
