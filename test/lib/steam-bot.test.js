@@ -3,50 +3,41 @@
 // -- Dependencies -------------------------------------------------------------
 
 // Node packaged modules
+const proxyquire = require('proxyquire')
 const tap = require('tap')
 
 // Local modules
-const SteamBot = require('../../lib/steam-bot')
+const SteamUser = require('../stub/steam-user.stub')
+
+// -- Helpers ------------------------------------------------------------------
+
+const SteamBot = proxyquire('../../lib/steam-bot', { 'steam-user': SteamUser })
 
 // -- Tests --------------------------------------------------------------------
 
 tap.test('SteamBot', tap => {
-  const bot = new SteamBot()
-  bot._client.logOn = login => {
-    process.nextTick(_ => {
-      bot._client.emit('loggedOn')
-    })
-  }
+  tap.plan(2)
 
-  tap.test('#start', tap => {
-    tap.test('should not pass an error', tap => {
-      bot.start(err => {
-        tap.error(err)
-        tap.end()
-      })
+  //
+  // Methods
+  //
+
+  tap.test('#start should not pass an error', tap => {
+    const bot = new SteamBot()
+    bot.start(err => {
+      tap.error(err)
+      tap.end()
     })
-    tap.end()
   })
 
-  tap.test('#exec', tap => {
-    tap.test('should display help message', tap => {
+  tap.test('#exec should not pass an error', tap => {
+    const bot = new SteamBot()
+    bot.start(err => {
+      tap.error(err)
       bot.exec('--help', (err, argv, output) => {
         tap.error(err)
-        tap.ok(argv.help)
         tap.end()
       })
     })
-
-    tap.test('should display version info', tap => {
-      bot.exec('--version', (err, argv, output) => {
-        tap.error(err)
-        tap.ok(argv.version)
-        tap.end()
-      })
-    })
-
-    tap.end()
   })
-
-  tap.end()
 })
