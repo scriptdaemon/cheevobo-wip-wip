@@ -16,7 +16,7 @@ const SteamBot = proxyquire('../../lib/steam-bot', { 'steam-user': SteamUser })
 // -- Tests --------------------------------------------------------------------
 
 tap.test('SteamBot', tap => {
-  tap.plan(2)
+  tap.plan(3)
 
   //
   // Methods
@@ -25,6 +25,14 @@ tap.test('SteamBot', tap => {
   tap.test('#start should not pass an error', tap => {
     const bot = new SteamBot()
     bot.start(err => {
+      tap.error(err)
+      tap.end()
+    })
+  })
+
+  tap.test('#stop should not pass an error', tap => {
+    const bot = new SteamBot()
+    bot.stop(err => {
       tap.error(err)
       tap.end()
     })
