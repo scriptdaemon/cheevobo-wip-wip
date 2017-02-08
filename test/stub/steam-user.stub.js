@@ -24,6 +24,18 @@ class SteamUser extends EventEmitter {
       this.emit('loggedOn')
     })
   }
+
+  /**
+   * SteamUser#logOff stub.
+   *
+   * @private
+   * @returns {void}
+  **/
+  logOff () {
+    process.nextTick(_ => {
+      this.emit('disconnected')
+    })
+  }
 }
 
 // -- Exports ------------------------------------------------------------------
