@@ -2,12 +2,15 @@
 
 // -- Dependencies -------------------------------------------------------------
 
+// Node.js API
+const path = require('path')
+
 // Node packaged modules
 const proxyquire = require('proxyquire')
 const tap = require('tap')
 
 // Local modules
-const SteamUser = require('../stub/steam-user.stub')
+const SteamUser = require('../stubs/steam-user.stub')
 
 // -- Helpers ------------------------------------------------------------------
 
@@ -23,7 +26,7 @@ tap.test('SteamBot', tap => {
   //
 
   tap.test('#start should not pass an error', tap => {
-    const bot = new SteamBot()
+    const bot = new SteamBot(path.resolve('../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
       tap.end()
@@ -31,15 +34,18 @@ tap.test('SteamBot', tap => {
   })
 
   tap.test('#stop should not pass an error', tap => {
-    const bot = new SteamBot()
-    bot.stop(err => {
+    const bot = new SteamBot(path.resolve('../fixtures/config.json'))
+    bot.start(err => {
       tap.error(err)
-      tap.end()
+      bot.stop(err => {
+        tap.error(err)
+        tap.end()
+      })
     })
   })
 
   tap.test('#exec should not pass an error', tap => {
-    const bot = new SteamBot()
+    const bot = new SteamBot(path.resolve('../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
       bot.exec('--help', (err, argv, output) => {
