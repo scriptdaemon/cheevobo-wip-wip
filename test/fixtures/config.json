@@ -1,3 +1,5 @@
 {
-  "cmd": "!test <cmd>"
+  "cmd": "!test <cmd>",
+  "blacklist": [],
+  "whitelist": []
 }

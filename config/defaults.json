@@ -1,3 +1,5 @@
 {
-  "cmd": "!bot <cmd>"
+  "cmd": "!bot <cmd>",
+  "blacklist": [],
+  "whitelist": []
 }
