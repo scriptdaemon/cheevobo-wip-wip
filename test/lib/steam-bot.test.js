@@ -19,7 +19,7 @@ const SteamBot = proxyquire('../../lib/steam-bot', { 'steam-user': SteamUser })
 // -- Tests --------------------------------------------------------------------
 
 tap.test('SteamBot', tap => {
-  tap.plan(9)
+  tap.plan(12)
 
   //
   // Methods
@@ -49,6 +49,37 @@ tap.test('SteamBot', tap => {
     bot.start(err => {
       tap.error(err)
       bot.exec('cmd', (err, argv, output) => {
+        tap.error(err)
+        tap.end()
+      })
+    })
+  })
+
+  tap.test('#muted should return false', tap => {
+    const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+    bot.start(err => {
+      tap.error(err)
+      tap.false(bot.muted('ID'))
+      tap.end()
+    })
+  })
+
+  tap.test('#mute should not error', tap => {
+    const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+    bot.start(err => {
+      tap.error(err)
+      bot.mute('ID', err => {
+        tap.error(err)
+        tap.end()
+      })
+    })
+  })
+
+  tap.test('#unmute should not error', tap => {
+    const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+    bot.start(err => {
+      tap.error(err)
+      bot.unmute('ID', err => {
         tap.error(err)
         tap.end()
       })
