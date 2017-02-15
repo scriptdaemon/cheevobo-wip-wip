@@ -1,5 +1,6 @@
 {
   "cmd": "!bot <cmd>",
+  "mute": [],
   "blacklist": [],
   "whitelist": []
 }

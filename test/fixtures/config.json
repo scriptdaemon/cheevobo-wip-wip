@@ -1,5 +1,6 @@
 {
   "cmd": "!test <cmd>",
+  "mute": [],
   "blacklist": [],
   "whitelist": []
 }
