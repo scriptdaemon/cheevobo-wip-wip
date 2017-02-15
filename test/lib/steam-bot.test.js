@@ -48,10 +48,8 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      bot.exec('cmd', (err, argv, output) => {
-        tap.error(err)
-        tap.end()
-      })
+      bot.exec('cmd', 'ID', 'ID')
+      tap.end()
     })
   })
 
