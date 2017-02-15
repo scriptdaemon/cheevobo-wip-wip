@@ -19,7 +19,7 @@ const SteamBot = proxyquire('../../lib/steam-bot', { 'steam-user': SteamUser })
 // -- Tests --------------------------------------------------------------------
 
 tap.test('SteamBot', tap => {
-  tap.plan(12)
+  tap.plan(13)
 
   //
   // Methods
@@ -44,11 +44,20 @@ tap.test('SteamBot', tap => {
     })
   })
 
+  tap.test('#respond should not error', tap => {
+    const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+    bot.start(err => {
+      tap.error(err)
+      bot.respond('76561197962144253', 'msg')
+      tap.end()
+    })
+  })
+
   tap.test('#exec should not error', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      bot.exec('cmd', 'ID', 'ID')
+      bot.exec('cmd', '76561197962144253', '76561197962144253')
       tap.end()
     })
   })
@@ -57,7 +66,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      tap.false(bot.muted('ID'))
+      tap.false(bot.muted('76561197962144253'))
       tap.end()
     })
   })
@@ -66,7 +75,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      bot.mute('ID', err => {
+      bot.mute('76561197962144253', err => {
         tap.error(err)
         tap.end()
       })
@@ -77,7 +86,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      bot.unmute('ID', err => {
+      bot.unmute('76561197962144253', err => {
         tap.error(err)
         tap.end()
       })
@@ -88,7 +97,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      tap.false(bot.whitelisted('ID'))
+      tap.false(bot.whitelisted('76561197962144253'))
       tap.end()
     })
   })
@@ -97,7 +106,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      bot.whitelist('ID', err => {
+      bot.whitelist('76561197962144253', err => {
         tap.error(err)
         tap.end()
       })
@@ -108,7 +117,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      bot.unwhitelist('ID', err => {
+      bot.unwhitelist('76561197962144253', err => {
         tap.error(err)
         tap.end()
       })
@@ -119,7 +128,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      tap.false(bot.blacklisted('ID'))
+      tap.false(bot.blacklisted('76561197962144253'))
       tap.end()
     })
   })
@@ -128,7 +137,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      bot.blacklist('ID', err => {
+      bot.blacklist('76561197962144253', err => {
         tap.error(err)
         tap.end()
       })
@@ -139,7 +148,7 @@ tap.test('SteamBot', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
       tap.error(err)
-      bot.unblacklist('ID', err => {
+      bot.unblacklist('76561197962144253', err => {
         tap.error(err)
         tap.end()
       })
