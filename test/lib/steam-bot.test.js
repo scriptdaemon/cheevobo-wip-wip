@@ -19,7 +19,7 @@ const SteamBot = proxyquire('../../lib/steam-bot', { 'steam-user': SteamUser })
 // -- Tests --------------------------------------------------------------------
 
 tap.test('SteamBot', tap => {
-  tap.plan(7)
+  tap.plan(9)
 
   //
   // Methods
@@ -55,6 +55,15 @@ tap.test('SteamBot', tap => {
     })
   })
 
+  tap.test('#whitelisted should return false', tap => {
+    const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+    bot.start(err => {
+      tap.error(err)
+      tap.false(bot.whitelisted('ID'))
+      tap.end()
+    })
+  })
+
   tap.test('#whitelist should not error', tap => {
     const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
     bot.start(err => {
@@ -74,6 +83,15 @@ tap.test('SteamBot', tap => {
         tap.error(err)
         tap.end()
       })
+    })
+  })
+
+  tap.test('#blacklisted should return false', tap => {
+    const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+    bot.start(err => {
+      tap.error(err)
+      tap.false(bot.blacklisted('ID'))
+      tap.end()
     })
   })
 
