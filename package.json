@@ -20,7 +20,8 @@
     "release:major": "npm version major && git push --follow-tags",
     "release:minor": "npm version minor && git push --follow-tags",
     "release:patch": "npm version patch && git push --follow-tags",
-    "test": "standard && tap \"test/**/*.test.js\""
+    "test": "standard && tap \"test/**/*.test.js\"",
+    "test:coverage": "npm run test -- --coverage-report=html"
   },
   "dependencies": {
     "chance": "^1.0.0",
