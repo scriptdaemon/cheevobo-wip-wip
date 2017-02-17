@@ -1,5 +1,8 @@
 node_modules/
 npm-debug.log*
 
+.nyc_output/
+coverage/
+
 config/*
 !config/defaults.json
