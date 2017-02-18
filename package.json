@@ -8,20 +8,24 @@
   "author": "Kenneth Williams",
   "files": [
     "bin/",
+    "doc/",
     "lib/"
   ],
   "main": "bin/cheevobot.js",
   "directories": {
     "bin": "bin/",
+    "doc": "doc/",
     "lib": "lib/"
   },
   "repository": "scriptdaemon/cheevobot",
   "scripts": {
+    "doc": "jsdoc bin/ lib/ -d doc/ -P package.json -r",
     "release:major": "npm version major && git push --follow-tags",
     "release:minor": "npm version minor && git push --follow-tags",
     "release:patch": "npm version patch && git push --follow-tags",
     "test": "standard && tap \"test/**/*.test.js\"",
-    "test:coverage": "npm test -- --coverage-report=html"
+    "test:coverage": "npm test -- --coverage-report=html",
+    "version": "npm run doc && git add doc/ -A"
   },
   "dependencies": {
     "chance": "^1.0.0",
@@ -31,6 +35,7 @@
     "yargs": "^6.1.1"
   },
   "devDependencies": {
+    "jsdoc": "^3.4.0",
     "proxyquire": "^1.5.0",
     "standard": "^8.0.0",
     "tap": "^10.0.0"
