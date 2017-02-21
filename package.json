@@ -20,12 +20,15 @@
   "repository": "scriptdaemon/cheevobot",
   "scripts": {
     "doc": "jsdoc bin/ lib/ -d doc/ -P package.json -r",
-    "release:major": "npm version major && git push --follow-tags",
-    "release:minor": "npm version minor && git push --follow-tags",
-    "release:patch": "npm version patch && git push --follow-tags",
-    "test": "standard && tap \"test/**/*.test.js\"",
+    "release:major": "npm version major -m \"chore(release): %s\"",
+    "release:minor": "npm version minor -m \"chore(release): %s\"",
+    "release:patch": "npm version patch -m \"chore(release): %s\"",
+    "pretest": "standard",
+    "test": "tap \"test/**/*.test.js\"",
     "test:coverage": "npm test -- --coverage-report=html",
-    "version": "npm run doc && git add doc/ -A"
+    "preversion": "npm test",
+    "version": "npm run doc && git add doc/ -A",
+    "postversion": "git push --follow-tags"
   },
   "dependencies": {
     "chance": "^1.0.0",
