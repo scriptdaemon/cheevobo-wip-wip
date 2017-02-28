@@ -10,11 +10,15 @@ const proxyquire = require('proxyquire')
 const tap = require('tap')
 
 // Local modules
+const nconf = require('../stubs/nconf.stub')
 const SteamUser = require('../stubs/steam-user.stub')
 
-// -- Helpers ------------------------------------------------------------------
+// -- Stubs --------------------------------------------------------------------
 
-const SteamBot = proxyquire('../../lib/steam-bot', { 'steam-user': SteamUser })
+const SteamBot = proxyquire('../../lib/steam-bot', {
+  nconf,
+  'steam-user': SteamUser
+})
 
 // -- Tests --------------------------------------------------------------------
 
