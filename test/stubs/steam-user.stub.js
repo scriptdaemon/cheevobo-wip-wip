@@ -11,7 +11,6 @@ const EventEmitter = require('events')
  * SteamUser stub.
 **/
 class SteamUser extends EventEmitter {
-
   /**
    * SteamUser#logOn stub.
    *

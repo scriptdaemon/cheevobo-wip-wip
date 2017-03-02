@@ -11,7 +11,6 @@ const nconf = require('nconf')
  * Provider stub.
 **/
 class Provider extends nconf.Provider {
-
   /**
    * Provider#save stub.
    *
