@@ -20,7 +20,7 @@
   "repository": "scriptdaemon/cheevobot",
   "scripts": {
     "doc": "jsdoc bin/ lib/ -d doc/ -P package.json -r",
-    "lint": "standard",
+    "lint": "standard bin/**/*.js lib/**/*js test/**/*.js",
     "release:major": "npm version major -m \"chore(release): %s\"",
     "release:minor": "npm version minor -m \"chore(release): %s\"",
     "release:patch": "npm version patch -m \"chore(release): %s\"",
