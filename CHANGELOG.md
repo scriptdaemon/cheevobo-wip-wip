@@ -5,6 +5,9 @@ project adheres to [Semantic Versioning][semver].
 
 ## [Unreleased]
 
+### New Features
+ - Bot: Allow joining / leaving a user or group chat
+
 ## 0.1.0 - 2017-03-07
 
 ### New Features

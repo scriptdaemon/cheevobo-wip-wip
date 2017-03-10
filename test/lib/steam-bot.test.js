@@ -45,6 +45,26 @@ tap.test('#stop should not error', tap => {
   })
 })
 
+tap.test('#join should not error', tap => {
+  const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+  bot.start(err => {
+    tap.error(err)
+    bot.join('76561197962144253', err => {
+      tap.error(err)
+      tap.end()
+    })
+  })
+})
+
+tap.test('#leave should not error', tap => {
+  const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+  bot.start(err => {
+    tap.error(err)
+    bot.leave('76561197962144253')
+    tap.end()
+  })
+})
+
 tap.test('#respond should not error', tap => {
   const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
   bot.start(err => {
