@@ -35,6 +35,31 @@ class SteamUser extends EventEmitter {
       this.emit('disconnected')
     })
   }
+
+  /**
+   * SteamUser#joinChat stub.
+   *
+   * @private
+   * @param {string} chatId - User or group chat Steam ID
+   * @param {Function} cb - Continuation function
+   * @returns {void}
+  **/
+  joinChat (chatId, cb) {
+    process.nextTick(_ => {
+      cb(1)
+    })
+  }
+
+  /**
+   * SteamUser#leaveChat stub.
+   *
+   * @private
+   * @param {string} chatId - User or group chat Steam ID
+   * @returns {void}
+  **/
+  leaveChat (chatId) {
+    // Do nothing
+  }
 }
 
 // -- Exports ------------------------------------------------------------------
