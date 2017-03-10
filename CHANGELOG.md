@@ -9,6 +9,9 @@ project adheres to [Semantic Versioning][semver].
  - Bot: Allow joining / leaving a user or group chat
  - Trigger: `acceptChatInvite` - Accept a chat invite
 
+### Bug Fixes
+ - Trigger: `execCmd` - Ignore blacklisted users
+
 ## 0.1.0 - 2017-03-07
 
 ### New Features
