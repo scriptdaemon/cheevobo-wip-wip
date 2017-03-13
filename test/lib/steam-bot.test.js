@@ -65,6 +65,26 @@ tap.test('#leave should not error', tap => {
   })
 })
 
+tap.test('#befriend should not error', tap => {
+  const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+  bot.start(err => {
+    tap.error(err)
+    bot.befriend('76561197962144253', err => {
+      tap.error(err)
+      tap.end()
+    })
+  })
+})
+
+tap.test('#unfriend should not error', tap => {
+  const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
+  bot.start(err => {
+    tap.error(err)
+    bot.unfriend('76561197962144253')
+    tap.end()
+  })
+})
+
 tap.test('#respond should not error', tap => {
   const bot = new SteamBot(path.join(__dirname, '../fixtures/config.json'))
   bot.start(err => {
