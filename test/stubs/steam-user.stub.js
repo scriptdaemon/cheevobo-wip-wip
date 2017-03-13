@@ -60,6 +60,20 @@ class SteamUser extends EventEmitter {
   leaveChat (chatId) {
     // Do nothing
   }
+
+  /**
+   * SteamUser#addFriend stub.
+   *
+   * @private
+   * @param {string} userId - User Steam ID
+   * @param {Function} cb - Continuation function
+   * @returns {void}
+  **/
+  addFriend (userId, cb) {
+    process.nextTick(_ => {
+      cb()
+    })
+  }
 }
 
 // -- Exports ------------------------------------------------------------------

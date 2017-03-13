@@ -7,6 +7,7 @@ project adheres to [Semantic Versioning][semver].
 
 ### New Features
  - Bot: Allow joining / leaving a user or group chat
+ - Bot: Allow befriending / unfriending a user
  - Trigger: `acceptChatInvite` - Accept a chat invite
 
 ### Bug Fixes
