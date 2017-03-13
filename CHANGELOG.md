@@ -9,6 +9,7 @@ project adheres to [Semantic Versioning][semver].
  - Bot: Allow joining / leaving a user or group chat
  - Bot: Allow befriending / unfriending a user
  - Trigger: `acceptChatInvite` - Accept a chat invite
+ - Trigger: `acceptFriendRequest` - Accept a friend request
 
 ### Bug Fixes
  - Trigger: `execCmd` - Ignore blacklisted users
