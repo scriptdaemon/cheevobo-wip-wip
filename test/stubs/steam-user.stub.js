@@ -41,12 +41,12 @@ class SteamUser extends EventEmitter {
    *
    * @private
    * @param {string} chatId - User or group chat Steam ID
-   * @param {Function} cb - Continuation function
+   * @param {Function} func - Continuation function
    * @returns {void}
   **/
-  joinChat (chatId, cb) {
+  joinChat (chatId, func) {
     process.nextTick(_ => {
-      cb(1)
+      func(1)
     })
   }
 

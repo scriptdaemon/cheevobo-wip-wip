@@ -42,7 +42,7 @@
   "devDependencies": {
     "jsdoc": "^3.4.0",
     "proxyquire": "^1.5.0",
-    "standard": "^9.0.0",
+    "standard": "^10.0.0",
     "tap": "^10.1.0"
   },
   "engines": {
