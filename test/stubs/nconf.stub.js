@@ -15,12 +15,12 @@ class Provider extends nconf.Provider {
    * Provider#save stub.
    *
    * @private
-   * @param {Function} cb - Continuation function
+   * @param {Function} func - Continuation function
    * @returns {void}
   **/
-  save (cb) {
+  save (func) {
     process.nextTick(_ => {
-      cb()
+      func()
     })
   }
 }

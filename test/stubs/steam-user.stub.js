@@ -66,12 +66,12 @@ class SteamUser extends EventEmitter {
    *
    * @private
    * @param {string} userId - User Steam ID
-   * @param {Function} cb - Continuation function
+   * @param {Function} func - Continuation function
    * @returns {void}
   **/
-  addFriend (userId, cb) {
+  addFriend (userId, func) {
     process.nextTick(_ => {
-      cb()
+      func()
     })
   }
 }
