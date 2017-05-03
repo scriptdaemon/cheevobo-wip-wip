@@ -1,5 +1,7 @@
 # CheevoBot
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/scriptdaemon/cheevobot.svg)](https://greenkeeper.io/)
+
 [![Build Status][build-status-img]][build-status-url]
 [![Test Coverage][test-coverage-img]][test-coverage-url]
 [![Code Review][code-review-img]][code-review-url]
