@@ -37,7 +37,7 @@
     "nconf": "^0.8.0",
     "require-all": "^2.0.0",
     "steam-user": "^3.0.0",
-    "yargs": "^7.0.0"
+    "yargs": "^8.0.1"
   },
   "devDependencies": {
     "jsdoc": "^3.4.0",
