@@ -14,6 +14,7 @@ os:
 branches:
   only:
     - master
+    - /^greenkeeper/.*$/
 
 notifications:
   email: false
