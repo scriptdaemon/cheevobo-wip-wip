@@ -20,7 +20,7 @@
   "repository": "scriptdaemon/cheevobot",
   "scripts": {
     "doc": "jsdoc bin/ lib/ -d doc/ -P package.json -r",
-    "lint": "standard bin/**/*.js lib/**/*js test/**/*.js",
+    "lint": "standard bin/**/*.js lib/**/*.js test/**/*.js",
     "release:major": "npm version major -m \"chore(release): %s\"",
     "release:minor": "npm version minor -m \"chore(release): %s\"",
     "release:patch": "npm version patch -m \"chore(release): %s\"",
@@ -37,7 +37,7 @@
     "nconf": "^0.8.0",
     "require-all": "^2.0.0",
     "steam-user": "^3.0.0",
-    "yargs": "^7.0.0"
+    "yargs": "^8.0.0"
   },
   "devDependencies": {
     "jsdoc": "^3.4.0",
