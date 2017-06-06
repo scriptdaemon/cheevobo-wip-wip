@@ -5,7 +5,11 @@ project adheres to [Semantic Versioning][semver].
 
 ## [Unreleased]
 
+### Breaking Changes
+ - Package: Drop support for Node.js 4
+
 ### New Features
+ - Package: Add support for Node.js 8
  - Bot: Allow joining / leaving a user or group chat
  - Bot: Allow befriending / unfriending a user
  - Trigger: `acceptChatInvite` - Accept a chat invite
