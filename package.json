@@ -24,6 +24,7 @@
     "release:major": "npm version major -m \"chore(release): %s\"",
     "release:minor": "npm version minor -m \"chore(release): %s\"",
     "release:patch": "npm version patch -m \"chore(release): %s\"",
+    "start": "node .",
     "pretest": "npm run lint",
     "test": "tap test/**/*.test.js -J",
     "test:coverage": "npm test -- --coverage-report=html",
