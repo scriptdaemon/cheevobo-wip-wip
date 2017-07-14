@@ -10,6 +10,7 @@ project adheres to [Semantic Versioning][semver].
 
 ### New Features
  - Package: Add support for Node.js 8
+ - Package: Add `start` npm script
  - Bot: Allow joining / leaving a user or group chat
  - Bot: Allow befriending / unfriending a user
  - Trigger: `acceptChatInvite` - Accept a chat invite
